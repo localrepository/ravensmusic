@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raven's Frequently Asked Questions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            background: -webkit-linear-gradient(135deg, #6a11cb, #2575fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 40px;
+        }
+
+        .faq {
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .faq h2 {
+            font-size: 1.5em;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            background: linear-gradient(135deg, #ff6f61, #de6262);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .faq h2 i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq p {
+            max-height: 0;
+            overflow: hidden;
+            margin: 0;
+            padding: 0 10px;
+            color: #666;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .faq.active h2 i {
+            transform: rotate(180deg);
+        }
+
+        .faq.active p {
+            max-height: 100px; /* Adjust this value based on content length */
+            margin-top: 10px;
+        }
+
+        .faq:last-child {
+            border-bottom: none;
+        }
+
+        .faq.active h2 {
+            background: linear-gradient(135deg, #fc4a1a, #f7b733);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .faq h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq">
+            <h2>Is Raven a boy or girl? <i class="fas fa-chevron-down"></i></h2>
+            <p>Raven is a transgender female using she/her pronouns.</p>
+        </div>
+        <div class="faq">
+            <h2>How old is Raven? <i class="fas fa-chevron-down"></i></h2>
+            <p>Raven is 20 years old!</p>
+        </div>
+        <div class="faq">
+            <h2>How long has Raven been doing music?<i class="fas fa-chevron-down"></i></h2>
+            <p> Raven began singing when she was 3 years old. She started out by signing along with her iPod nano in her mom's car. This is when she began learning to control pitch and match pitch. January of 2024, Raven went through a terrible breakup, so she began writing music and playing ukelele.</p>
+        </div>
+        <div class="faq">
+            <h2>What is Raven's favorite song to play? <i class="fas fa-chevron-down"></i></h2>
+            <p> Raven's favorite song to play is Yellow by Coldplay. Raven's favorite song is Los Angeles by The Midnight.</p>
+        </div>
+        <div class="faq">
+            <h2>Where is Raven from? <i class="fas fa-chevron-down"></i></h2>
+            <p>Raven is from Massachusetts. She currently lives in Stockton, California.</p>
+        </div>
+         <div class="faq">
+            <h2>Does Raven have her own songs? <i class="fas fa-chevron-down"></i></h2>
+            <p>Raven has written many songs. They are yet to be released due to funding for studio time. Reach out to her if you are interested in helping!</p>
+        </div>
+         <div class="faq">
+            <h2>Has Raven tried out for AGT/American Idol/The Voice? <i class="fas fa-chevron-down"></i></h2>
+            <p>Raven has submitted tapes to AGT and The Voice in June of 2024. </p>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('.faq h2').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
